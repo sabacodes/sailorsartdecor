@@ -1,0 +1,156 @@
+@import "../../../styles.scss";
+
+.about {
+  padding: 20px 0 50px;
+  background-color: #F9F3EF;
+  padding: 100px 0;
+  // margin: 0 0 80px;
+
+  h1 {
+    font-size: 40px;
+    font-family: "Playfair Display";
+    letter-spacing: 1px;
+    padding: 0 0 30px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding: 0px 0px 30px;
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  // h3 {
+  //   font-family: benton-sans, sans-serif;
+  //   font-size: 15px;
+  //   margin-bottom: 10px;
+  //   margin-top: 30px;
+  //   letter-spacing: 1px;
+  //   font-weight: 900;
+  //   color: $theme-peach;
+  // }
+
+  // h2 {
+  //   font-family: "Playfair Display";
+  //   font-size: 26px;
+  //   font-weight: 600;
+  //   letter-spacing: 0.44px;
+  //   margin-bottom: 30px;
+  //   color: $theme-blue;
+  // }
+
+  // p {
+  //   font-family: benton-sans, sans-serif;
+  //   font-size: 14px;
+  //   margin-bottom: 20px;
+  //   line-height: 1.8;
+  // }
+
+  // .featured {
+  //   padding: 30px 0 30px;
+
+  //   h1 {
+  //     padding: 10px 0 0;
+  //     letter-spacing: 2.1px;
+  //     font-family: "Playfair Display";
+  //     font-weight: bold;
+  //     text-align: center;
+  //   }
+
+  //   .col-md-3 {
+  //     img {
+  //       max-width: 95%;
+  //       max-height: 100%;
+  //     }
+  //   }
+  // }
+}
+
+.services {
+  background-color: #F9F3EF;
+  padding: 0 0 50px;
+
+  h1 {
+    font-size: 40px;
+    font-family: "Playfair Display";
+    padding: 100px 0 30px;
+    margin: 0;
+    color: $theme-black;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-family: "Playfair Display";
+    padding: 100px 0 30px;
+    margin: 0;
+    color: $theme-black;
+    letter-spacing: 1.5px;
+  }
+
+  p {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding: 0px 0px 100px;
+    color: $theme-black;
+    margin: 0;
+  }
+
+}
+
+.why-us {
+  background-color: $theme-black;
+
+  h1 {
+    font-size: 40px;
+    font-family: "Playfair Display";
+    padding: 100px 0 30px;
+    margin: 0;
+    color: $theme-white;
+  }
+
+  p {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding: 0px 0px 100px;
+    color: $theme-white;
+    margin: 0;
+  }
+
+  .images {
+    position: relative;
+
+    .img1 {
+      position: absolute;
+      left: -20px;
+      top: 30px;
+      width: 64%;
+      z-index: 999;
+    }
+
+    .img2 {
+      position: absolute;
+      right: -10px;
+      bottom: 30px;
+      width: 63%;
+    }
+  }
+}
+
+@media(max-width:767px) {
+  .about {
+    .row {
+      flex-direction: column-reverse;
+
+      h1 {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}

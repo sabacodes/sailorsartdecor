@@ -1,0 +1,534 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$tb-app-primary: mat-palette($mat-indigo);
+$tb-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$tb-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$tb-app-theme: mat-light-theme($tb-app-primary, $tb-app-accent, $tb-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($tb-app-theme);
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$tb-app-primary: mat-palette($mat-indigo);
+$tb-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$tb-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$tb-app-theme: mat-light-theme($tb-app-primary, $tb-app-accent, $tb-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($tb-app-theme);
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  image-orientation: from-image;
+}
+
+body {
+  font-family: "Poppins" !important;
+}
+
+// designed the scrollbar
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #d2d2d2;
+  outline: 1px solid #a7a7a7;
+  border: 1px solid #a7a7a7;
+  height: 300px !important;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container-outer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container-inner {
+  padding: 0 140px;
+}
+
+// color variables
+$theme-blue: #1b3569;
+$theme-white: #ffffff;
+$theme-black: #000000;
+$theme-gray: #a7a7a7;
+// $theme-peach: #ff7865;
+$theme-peach:#FAAA9F;
+
+// Contact form design
+input {
+  width: 100%;
+  display: block;
+  padding: 5px 0px;
+}
+
+.mat-input-element {
+  color: $theme-black !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: $theme-peach !important;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: $theme-black !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  // background-color:$theme-black !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: $theme-black !important;
+  ;
+}
+
+// .mat-input-element {
+//   color: $theme-peach !important;
+// }
+
+// hover.css
+/* Sweep To Right */
+// blue to black
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  // border: 2px solid $theme-blue;
+  border: 0;
+  background: $theme-black;
+  color: $theme-white;
+  font-family: "Playfair Display";
+  font-weight: bold;
+  width: 100%;
+  padding: 11px 0;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $theme-peach;
+  // border:2px solid $theme-peach;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-right:hover,
+.hvr-sweep-to-right:focus,
+.hvr-sweep-to-right:active {
+  color: white;
+  outline: none;
+}
+
+.hvr-sweep-to-right:hover:before,
+.hvr-sweep-to-right:focus:before,
+.hvr-sweep-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+// peach to black
+
+.hvr-sweep-to-black {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  // border: 2px solid $theme-blue;
+  border: 0;
+  background: $theme-gray;
+  color: $theme-white;
+  font-family: "Playfair Display";
+  font-weight: bold;
+  // width: 100%;
+  padding: 11px 0;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.hvr-sweep-to-black:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $theme-black;
+  // border:2px solid $theme-peach;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-black:hover,
+.hvr-sweep-to-black:focus,
+.hvr-sweep-to-black:active {
+  color: white;
+}
+
+.hvr-sweep-to-black:hover:before,
+.hvr-sweep-to-black:focus:before,
+.hvr-sweep-to-black:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.blue-btn {
+  width: 100%;
+  padding: 15px 0;
+  border: 0;
+  background: $theme-blue;
+  color: $theme-white;
+  border: 2px solid $theme-blue;
+  font-weight: bold;
+  letter-spacing: 2.4px;
+
+  &:hover {
+    border: 2px solid $theme-blue;
+    background: $theme-white;
+    color: $theme-blue;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.peach-btn {
+  width: 100%;
+  padding: 15px 0;
+  border: 0;
+  background: $theme-peach;
+  color: $theme-white;
+  border: 2px solid $theme-peach;
+  font-weight: bold;
+  // letter-spacing: 2.4px;
+  font-family: "Playfair Display";
+
+  &:hover {
+    border: 2px solid $theme-peach;
+    background: $theme-white;
+    color: $theme-peach;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// faqs
+
+.ui-accordion .ui-accordion-header a {
+  padding: 30px !important;
+  color: $theme-black !important;
+  background-color: $theme-white !important;
+  border: 1px solid $theme-white !important;
+  font-weight: 700;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
+  letter-spacing: 1.5px !important;
+  margin:0 0 30px !important;
+}
+.ui-accordion .ui-accordion-header:not(.ui-state-disabled).ui-state-active a{
+  margin:0 0 0px !important;
+}
+.ui-accordion .ui-accordion-content {
+  padding: 0.571em 1em;
+  border: 0px !important;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 10px 30px 50px !important;
+  letter-spacing: 1.2px;
+}
+.ui-accordion .ui-accordion-header:not(.ui-state-disabled).ui-state-active a {
+  background-color: $theme-peach !important;
+  border: 1px solid $theme-peach !important;
+  color: $theme-white !important;
+}
+
+.gallery-details {
+  .carousel {
+    &:focus {
+      border: 0 !important;
+      outline: none;
+    }
+  }
+
+  .carousel-inner {
+    &:focus {
+      border: 0 !important;
+      outline: none;
+    }
+  }
+
+  .carousel-item {
+    &:focus {
+      border: 0 !important;
+      outline: none;
+    }
+
+    &.active {
+      &:focus {
+        border: 0 !important;
+        outline: none;
+      }
+    }
+  }
+
+  .carousel-indicators {
+    display: none !important;
+  }
+
+  .carousel-control-prev {
+    top: -20px;
+    left: 0px;
+    z-index: 0;
+    width: auto;
+
+    &:focus {
+      border: 0;
+      outline: none;
+    }
+
+    .carousel-control-prev-icon {
+      transform: rotate(180deg);
+      background-image: url(/assets/images/svg/left.svg);
+      width: 50px;
+      background-size: 70%;
+      background-repeat: no-repeat;
+      height: 50px;
+
+      &:focus {
+        border: 0;
+        outline: none;
+      }
+    }
+  }
+
+  .carousel-control-next {
+    top: -20px !important;
+    right: 0px !important;
+    width: auto;
+
+    .carousel-control-next-icon {
+      background-image: url(/assets/images/svg/left.svg);
+      width: 50px;
+      background-size: 70%;
+      background-repeat: no-repeat;
+      height: 50px;
+
+      &:focus {
+        border: 0;
+        outline: none;
+      }
+    }
+
+    &:focus {
+      border: 0;
+      outline: none;
+    }
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// Pagination design
+.ngx-pagination {
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+
+  li {
+    margin-right: 10px !important;
+
+    a {
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
+
+  .current {
+    padding: 4px 12px !important;
+    background: #1b3569 !important;
+    color: #fefefe;
+    cursor: default;
+    // border-radius: 50%;
+  }
+}
+
+// sidebar
+.ui-sidebar-left {
+  top: 0px !important;
+  padding: 0 !important;
+  overflow-y: auto !important;
+  box-shadow: none !important;
+  border: 0 !important;
+
+  .pi-times {
+    display: none !important;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      border-top: 1px solid #d2d2d278;
+      // border-bottom: 1px solid #d2d2d278;
+      padding: 30px 20px;
+      text-transform: uppercase;
+      font-family: "Playfair Display";
+      letter-spacing: 2.4px;
+      font-weight: bold;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &:hover {
+        background-color: $theme-blue;
+        color: $theme-white;
+      }
+    }
+  }
+}
+
+.ui-widget-overlay {
+  z-index: 0 !important;
+}
+
+.blog {
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+// blog text editor classes
+
+.ql-align-right {
+  text-align: right !important;
+}
+
+.ql-align-center {
+  text-align: center !important;
+}
+
+.ql-align-left {
+  text-align: left !important;
+}
+
+@media (max-width: 1050px) {
+  .container-inner {
+    padding: 0 50px;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .container-inner {
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery-details {
+    .img {
+      min-height: 500px;
+      height: 100% !important;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .desc {
+      padding: 25px 15px 50px !important;
+    }
+  }
+}

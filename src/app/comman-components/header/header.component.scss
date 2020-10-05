@@ -1,0 +1,148 @@
+@import "../../../styles.scss";
+
+header {
+  width: 100%;
+  //background-color: $theme-white;
+  //z-index: 999;
+  .logo {
+    padding: 15px 0 0;
+    text-align: center;
+    img{
+      width:100%;
+    }
+    &:focus {
+      outline: none;
+      border: 0;
+    }
+    h6 {
+      //font-weight: bold;
+      letter-spacing: 1.5px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+  hr {
+    margin: 0;
+  }
+  .nav {
+    .nav-item {
+      .nav-link {
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 15px;
+        color: $theme-black;
+        font-weight: bold;
+        position: relative;
+        letter-spacing: 2.1px;
+        //font-family: "Playfair Display";
+        &.active {
+          color: $theme-peach;
+          // color: #6dd5ed;
+          font-weight: bold;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 1px;
+            // background-color: #6dd5ed;
+            background-color: $theme-peach;
+            bottom: -5px;
+            left: 35px;
+          }
+        }
+        &:hover {
+          font-weight: bold;
+          color: $theme-peach;
+          // color: #6dd5ed;
+        }
+        &.blog {
+          &.active {
+            color: $theme-peach;
+            // color: #6dd5ed;
+            font-weight: bold;
+            &::after {
+              content: "";
+              position: absolute;
+              width: 25px !important;
+              height: 1px;
+              background-color: $theme-peach;
+              bottom: -5px;
+              left: 21px !important;
+            }
+          }
+        }
+        &.about {
+          &.active {
+            color: $theme-peach;
+            // color: #6dd5ed;
+            font-weight: bold;
+            &::after {
+              content: "";
+              position: absolute;
+              width: 30px !important;
+              height: 1px;
+              background-color: $theme-peach;
+              bottom: -5px;
+              left: 27px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  svg {
+    width: 23px;
+    height: auto;
+    &:hover {
+      fill: $theme-peach;
+    }
+    &:focus {
+      fill: $theme-peach;
+    }
+  }
+  .sidebutton {
+    display: none;
+    button {
+      &.navigation {
+        background: none;
+        border: 0;
+        img {
+          width:25px;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  color: $theme-blue;
+}
+
+@media (max-width: 991px) {
+  header {
+    .navbar{
+      display: none;
+    }
+    .sidebutton {
+      display: block;
+      button {
+        &.navigation {
+          background: none;
+          border: 0;
+          img {
+            width: 30px;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+    .logo{
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,229 @@
+@import "../../../../styles.scss";
+
+.blog-details {
+  .heading {
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 76px;
+      font-family: "Playfair Display";
+      line-height: 1.2;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .blog {
+    margin: 50px 0 90px;
+
+    h1 {
+      font-size: 45px;
+      margin-bottom: 25px;
+      font-family: "Playfair Display";
+      font-weight: bold;
+      letter-spacing: 0.44px;
+      line-height: 1.1;
+    }
+
+    .date {
+      font-size: 14px;
+      color: $theme-gray;
+      font-family: benton-sans, sans-serif;
+      margin-bottom: 30px;
+
+      .author {
+        font-size: 14px;
+        color: $theme-gray;
+        font-family: benton-sans, sans-serif;
+      }
+    }
+
+    img {
+      margin-bottom: 30px;
+    }
+
+    .sub-para {
+      font-size: 15px;
+      color: $theme-gray;
+      line-height: 1.61;
+      margin-bottom: 17px;
+      font-family: benton-sans, sans-serif;
+    }
+
+    .para {
+      font-size: 16px;
+      color: #313131;
+      line-height: 1.61;
+      margin-bottom: 17px;
+      font-family: benton-sans, sans-serif;
+    }
+
+    .fb {
+      background-color: #3b5998;
+      color: $theme-white;
+      text-align: center;
+
+      a {
+        color: $theme-white;
+      }
+
+      .fa {
+        color: $theme-white;
+        font-size: 15px;
+      }
+
+      h5 {
+        margin: 0;
+        font-size: 15px;
+        font-family: benton-sans, sans-serif;
+        font-weight: bold;
+      }
+    }
+
+    .twitter {
+      background-color: #00acee;
+      color: $theme-white;
+      text-align: center;
+
+      a {
+        color: $theme-white;
+      }
+
+      .fa {
+        color: $theme-white;
+        font-size: 15px;
+      }
+
+      h5 {
+        margin: 0;
+        font-size: 15px;
+        font-family: benton-sans, sans-serif;
+        font-weight: bold;
+      }
+    }
+
+    .in {
+      background-color: #0e76a8;
+      color: $theme-white;
+      text-align: center;
+
+      a {
+        color: $theme-white;
+      }
+
+      .fa {
+        color: $theme-white;
+        font-size: 15px;
+      }
+
+      h5 {
+        margin: 0;
+        font-size: 15px;
+        font-family: benton-sans, sans-serif;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .comments {
+    padding: 63px 0px;
+    background-color: #f8f8f8;
+
+    .comment-detail {
+      margin-bottom: 10px;
+    }
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      border: solid 1.5px $theme-peach;
+      margin-right: 30px;
+      border-radius: 50%;
+    }
+
+    h6 {
+      font-size: 20px;
+      color: #313131;
+      margin-bottom: 18px;
+      font-family: benton-sans, sans-serif;
+    }
+
+    hr {
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      font-size: 16px;
+      color: #313131;
+      font-family: benton-sans, sans-serif;
+      font-weight: bold;
+    }
+
+    h5 {
+      font-size: 16px;
+      color: $theme-gray;
+      font-family: benton-sans, sans-serif;
+    }
+
+    p {
+      font-size: 14px;
+      color: #313131;
+      line-height: 1.61;
+      font-family: benton-sans, sans-serif;
+    }
+
+    label {
+      font-size: 18px;
+      color: #313131;
+      margin-bottom: 27px;
+      // font-family: benton-sans, sans-serif;
+      font-family: "Playfair Display";
+    }
+
+    textarea {
+      height: 239px;
+      padding: 20px !important;
+      background-color: #ffffff;
+      width: 100%;
+      border-radius: 0;
+      border: 0 !important;
+      color: #6c757d !important;
+      font-size: 16px;
+      margin-bottom: 40px;
+      font-family: benton-sans, sans-serif;
+
+      &::placeholder {
+        font-size: 16px;
+        color: #6c757d !important;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input {
+      background-color: #ffffff;
+      width: 100%;
+      padding: 20px !important;
+      border-radius: 0 !important;
+      border: 0 !important;
+      margin-bottom: 40px;
+      font-family: benton-sans, sans-serif;
+      font-size: 16px;
+      color: #6c757d;
+
+      &::placeholder {
+        font-size: 16px;
+        color: #6c757d !important;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

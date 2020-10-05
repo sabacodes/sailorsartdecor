@@ -1,0 +1,78 @@
+<section class="blog-listing">
+  <div class="row no-gutters align-items-center">
+    <div class="blog-description" *ngIf="collectionSize != 0">
+      <div class="title">
+        <h1>
+          {{ blogs[0]?.title }}
+        </h1>
+        <a
+          [routerLink]="['/blog/view']"
+          [queryParams]="{ id: blogs[0].id }"
+          routerLinkActive="router-link-active"
+          class="hvr-sweep-to-black"
+          >Read Now</a
+        >
+      </div>
+    </div>
+    <div *ngIf="collectionSize != 0" class="blog-image">
+      <img [src]="blogs[0]?.image" class="img-fluid blog-latest" />
+    </div>
+    <div class="navigation">
+      <div class="container-outer">
+        <div class="container-inner">
+          <div class="row no-gutters">
+            <h2>All posts</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="collectionSize != 0" class="container-outer">
+    <div class="container-inner">
+      <div class="row blogs">
+        <div
+          class="col-lg-6 col-md-6 col-sm-6"
+          *ngFor="
+            let blog of blogs
+              | paginate
+                : {
+                    itemsPerPage: limit,
+                    currentPage: page,
+                    totalItems: collectionSize
+                  }
+          "
+        >
+          <div class="row align-items-start">
+            <div class="col-md-6">
+              <div class="blog-image">
+                <img [src]="blog.image" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>{{ blog?.title }}</h5>
+              <p>{{ blog?.subHeading }}</p>
+              <a
+                [routerLink]="['/blog/view']"
+                [queryParams]="{ id: blog?.id }"
+                class="hvr-sweep-to-black"
+                >Read Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-right mb-5">
+          <pagination-controls
+          *ngIf="collectionSize != 0"
+          (pageChange)="loadPage($event)"
+          previousLabel="Prev"
+          nextLabel="| Next"
+        >
+        </pagination-controls>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</section>

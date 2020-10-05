@@ -1,0 +1,120 @@
+<section class="blog-details" *ngIf="blogData">
+  <div class="container-outer">
+    <div class="container-inner">
+      <div class="row blog">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h1>{{blogData?.title}}</h1>
+              <p class="date">
+                <span class="author">By Teesta Bhandare </span> | {{blogData?.date}},
+                6 min read
+              </p>
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col-md-12">
+              <img src="assets/images/jpeg/sample.jpg" class="img-fluid" />
+            </div>
+          </div> -->
+          <div class="row">
+            <div class="col-md-12" [innerHtml]="blogData?.description">
+            </div>
+          </div>
+          <div class="row mt-5 justify-content-around">
+            <div class="col-md-4  col-sm-6 mb-3">
+              <div class="fb d-flex align-items-center justify-content-center p-2">
+                <h5>
+                  <a target="_blank"
+                    [href]='"https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttps%3A%2F%2Fteestabhandare.com%2Fblog%2Fview%3Fid%3D"+ blogData?.id'>
+                    <i class="fa fa-facebook mr-2" aria-hidden="true"></i> Share
+                    on Facebook</a>
+                </h5>
+              </div>
+            </div>
+            <div class="col-md-4  col-sm-6 mb-3">
+              <div class="twitter d-flex align-items-center justify-content-center p-2">
+                <h5>
+                  <a target="_blank"
+                    [href]='"https://twitter.com/intent/tweet/?url=https%3A%2F%2Fteestabhandare.com%2Fblog%2Fview%3Fid%3D"+ blogData?.id'>
+                    <i class="fa fa-twitter mr-2" aria-hidden="true"></i>Share on
+                    Twitter</a>
+                </h5>
+              </div>
+            </div>
+            <div class="col-md-4  col-sm-6 mb-3">
+              <div class="in d-flex align-items-center justify-content-center p-2">
+                <h5>
+                  <a target="_blank"
+                    [href]='"https://www.linkedin.com/sharing/share-offsite/?url=http%3A%2F%2Fteestabhandare.com%2Fblog%2Fview%3Fid%3D"+ blogData?.id'>
+                    <i class="fa fa-linkedin mr-2" aria-hidden="true"></i>Share on
+                    Linkedin</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="comments">
+    <div class="container-outer">
+      <div class="container-inner">
+        <div class="row">
+          <div class="col-md-12 mb-5 pb-3">
+            <form [formGroup]="commentForm" (ngSubmit)="doComment()">
+              <div class="row">
+                <div class="col-md-12">
+                  <label>
+                    Leave Comments
+                  </label>
+                </div>
+                <div class="col-md-12">
+                  <textarea placeholder="What do you have in mind?" formControlName="comment" maxlength="500"
+                    required></textarea>
+                  <div *ngIf="submitted && f.comment.errors" style="color: red;">
+                    <div *ngIf="f.comment.errors.required">Comment is required</div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <input placeholder="Name*" type="text" maxlength="50" formControlName="name" required />
+                  <div *ngIf="submitted && f.name.errors" style="color: red;">
+                    <div *ngIf="f.name.errors.required">Name is required</div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <input type="email" placeholder="Email Address*" formControlName="email" maxlength="50" required />
+                  <div *ngIf="submitted && f.email.errors" style="color: red;">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.pattern">Invalid email</div>
+                  </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                  <button type="submit" class="hvr-sweep-to-black p-3">
+                    Leave a Comment
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-12">
+            <h6>{{totalComments}} Comment</h6>
+            <hr />
+          </div>
+          <div class="col-md-12 comment-detail" *ngFor="let comment of comments">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="d-flex justify-content-between mt-1">
+                  <h4>{{comment?.name}}</h4>
+                </div>
+                <p>{{comment?.comment}}
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

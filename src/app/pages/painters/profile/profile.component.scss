@@ -1,0 +1,35 @@
+@import "../../../../styles.scss";
+
+.painter {
+  .navigation {
+    background-color: $theme-blue;
+    width: 100%;
+    padding: 30px 0;
+    margin-bottom: 50px;
+    h2 {
+      color: $theme-white;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 0;
+      font-family: benton-sans, sans-serif;
+    }
+  }
+  .profile {
+      padding-bottom: 50px;
+    h1 {
+      font-family: "Playfair Display";
+      font-size: 28px;
+      letter-spacing: 0.44px;
+      margin-bottom: 20px;
+      margin-top: 5px;
+      color:$theme-blue;
+    }
+    p {
+      font-family: benton-sans, sans-serif;
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+  }
+}

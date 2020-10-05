@@ -1,0 +1,233 @@
+@import "../../../../styles.scss";
+
+.blog-listing {
+  .blog-description {
+    flex-basis: 55%;
+
+    .title {
+      max-width: 720px;
+      width: 100%;
+      padding-left: 130px;
+      float: right;
+      padding-right: 30px;
+
+      h1 {
+        font-family: "Playfair Display";
+        font-size: 55px;
+        font-weight: bold;
+        letter-spacing: 0.44px;
+        margin-bottom: 55px;
+        line-height: 1.1;
+      }
+
+      a {
+        background-color: $theme-peach;
+        font-family: "Playfair Display";
+        color: $theme-white;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 18px 32px;
+        display: inline-block;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .blog-image {
+    flex-basis: 45%;
+
+    img {
+      // width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+
+      &.blog-latest {
+        width: 100%;
+      }
+    }
+  }
+
+  .navigation {
+    // background-color: $theme-blue;
+    width: 100%;
+    padding: 30px 0 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    position: relative;
+
+    // border-bottom: 1px solid #d2d2d2;
+    .row {
+      border-bottom: 1px solid #d2d2d2;
+      padding: 0 0 20px;
+    }
+
+    img {
+      width: 40px;
+      position: absolute;
+      top: 15px;
+    }
+
+    h2 {
+      color: $theme-blue;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 0;
+      letter-spacing: 1.2px;
+      font-family: "Playfair Display";
+      // margin-left:55px;
+      text-align: center;
+      // text-transform: uppercase;
+    }
+  }
+
+  .blogs {
+    margin-bottom: 50px;
+
+    .blog-image {
+      position: relative;
+      height: 280px;
+      overflow: hidden;
+      margin-bottom: 10px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+
+        &.blog-latest {
+          width: 100%;
+        }
+      }
+    }
+
+
+    h5 {
+      font-family: "Playfair Display";
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.2;
+
+      &:hover {
+        color: $theme-blue;
+      }
+    }
+
+    p {
+      font-family: benton-sans, sans-serif;
+      color: $theme-gray;
+      font-size: 13px;
+      word-break: break-word;
+    }
+
+    a {
+      background-color: $theme-peach;
+      font-family: "Playfair Display";
+      color: $theme-white;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 8px 12px;
+      display: inline-block;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .row {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .blog-listing {
+    .blog-description {
+      .title {
+        max-width: 720px;
+        width: 100%;
+        padding-left: 50px !important;
+        float: right;
+        padding-right: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .blog-listing {
+    .blog-description {
+      h1 {
+        font-family: "Playfair Display";
+        font-size: 40px !important;
+        font-weight: bold;
+        letter-spacing: 0.44px;
+        margin-bottom: 40px !important;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-listing {
+    .blog-description {
+      .title {
+        max-width: 720px;
+        width: 100%;
+        padding-left: 30px !important;
+        float: right;
+        padding-right: 30px;
+      }
+    }
+
+    .blogs {
+      img {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .blog-listing {
+    .blog-description {
+      h1 {
+        font-family: "Playfair Display";
+        font-size: 35px !important;
+        font-weight: bold;
+        letter-spacing: 0.44px;
+        margin-bottom: 30px !important;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 615px) {
+  .blog-listing {
+    .blog-description {
+      flex-basis: 100%;
+      margin: 20px 0 40px;
+    }
+
+    .blog-image {
+      padding: 0 30px;
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .blogs {
+    margin-bottom: 50px;
+
+    .blog-image {
+      position: relative;
+      height: auto !important;
+      overflow: hidden;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+}

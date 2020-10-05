@@ -1,0 +1,107 @@
+@import "../../../styles.scss";
+
+
+.under {
+    // background-color: #161641;
+    background-image: url("../../../assets/images/jpeg/pink-bg.jpg");
+    .background {
+        background-image: url(../../../assets/images/gifs/rocket.gif);
+        background-repeat: no-repeat;
+        background-position: top 50% center;
+        height: 100vh;
+        background-size: inherit;
+    }
+
+    .launch {}
+
+    .notify {
+        height: 100vh;
+        position: relative;
+
+        h1 {
+            font-family: "Playfair Display";
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 1.2;
+            color: $theme-white;
+            padding: 150px 0 60px;
+        }
+
+        input {
+            padding: 11px 10px;
+            border-radius: 5px;
+            border: 1px solid $theme-blue;
+            font-family: benton-sans, sans-serif;
+            color: $theme-black;
+            letter-spacing: 0.6px;
+            margin-bottom: 100px;
+            // background-color: grey;
+
+            &:focus {
+                outline: none;
+                border: 1px solid $theme-blue;
+            }
+        }
+
+        .send {
+            position: absolute;
+            top: 0px;
+            right: 15px;
+
+            button {
+                border: 0;
+                padding: 9.5px 14px;
+                width: 100%;
+                background: $theme-blue;
+                border-radius: 5px;
+
+                &:focus {
+                    background-color: $theme-black;
+                    outline: none;
+                }
+
+                img {
+                    width: 20px;
+                    height: 25px;
+                }
+            }
+        }
+
+        .instagram {
+            svg {
+                fill: $theme-white;
+                width: 30px;
+            }
+        }
+    }
+}
+
+
+@media(max-width:767px) {
+    .under {
+        background-color: #161641;
+        height: 100vh;
+        .background {
+            background-image: url(../../../assets/images/gifs/launch.gif);
+            background-repeat: no-repeat;
+            background-position: top 0% center;
+            height:255px;
+            background-size: contain;
+        }
+
+        .notify {
+            position: relative;
+            height: auto;
+            h1 {
+                font-family: "Playfair Display";
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 1.2;
+                color: $theme-white;
+                text-align:center;
+                padding: 0px 0 60px;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<section class="artwork-details">
+    <div class="container-outer">
+        <div class="container-inner">
+            <div class="row align-items-start">
+                <div class="col-md-6">
+                    <div class="image">
+                        <img [src]="artworkData?.image" class="img-fluid" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="detail">
+                        <h1>{{artworkData?.name}}</h1>
+                        <h5>By <a href="javascript:void(0)" [routerLink]="['/painter']" routerLinkActive="router-link-active" >{{ artworkData?.painterName }}</a></h5>
+                        <div class="overview">
+                            <h3>Overview</h3>
+                            <p>{{ artworkData?.description }}</p>
+                            <!-- <p>Acrylic</p>
+                            <p>Unique Work</p> -->
+                        </div>
+                        <div class="dimension">
+                            <h3>Dimensions</h3>
+                            <p>{{ artworkData?.dimensions }}</p>
+                            <p class="note">Note: Actual colours may vary due to photography & computer settings.
+                            </p>
+                        </div>
+                        <div class="buy">
+                            <a href="javascript:void(0)" class="hvr-sweep-to-black" [routerLink]="['/contact']" [queryParams]="{subject:artworkData?.name}" routerLinkActive="router-link-active" >Enquire To Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

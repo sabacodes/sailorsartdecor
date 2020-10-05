@@ -1,0 +1,85 @@
+<section class="artwork-listing">
+  <div class="navigation">
+    <div class="container-outer">
+      <div class="container-inner">
+        <div class="row no-gutters align-items-center">
+          <div class="col-md-12">
+            <h2>All artwork</h2>
+          </div>
+          <!-- <div class="col-md-6 text-right">
+            <pagination-controls
+              *ngIf="collectionSize != 0"
+              (pageChange)="loadPage($event)"
+              previousLabel="Prev"
+              nextLabel="| Next"
+            >
+            </pagination-controls>
+          </div> -->
+
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-outer">
+    <div class="container-inner">
+      <div class="row artworks">
+        <div
+          class="col-md-4 col-sm-4 col-6"
+          *ngFor="
+            let artwork of artworks
+              | paginate
+                : {
+                    itemsPerPage: limit,
+                    currentPage: page,
+                    totalItems: collectionSize
+                  };
+            let i = index
+          "
+        >
+          <div class="row align-items-center">
+            <div class="col-md-12 pointer">
+              <div class="artwork-img">
+                <img
+                  (click)="viewArtwork(artwork)"
+                  [src]="artwork?.image"
+                  class=""
+                />
+                <!-- <div class="view" (click)="viewArtwork(artwork)">
+                  <h5>View <i class="fa fa-eye" aria-hidden="true"></i>
+                  </h5>
+                </div> -->
+                <!-- <div class="image"></div> -->
+                <!-- <img src="../../../../assets/images/jpeg/curation.jpg"/> -->
+              </div>
+            </div>
+            <div class="col-md-12">
+              <h5 (click)="viewArtwork(artwork)">{{ artwork.name }}</h5>
+              <h6>{{ artwork.painterName }}, {{ artwork.painterLocation }}</h6>
+              <p>Painting</p>
+              <a
+                href="javascript:void(0)"
+                [routerLink]="['/contact']"
+                [queryParams]="{ subject: artwork?.name }"
+                routerLinkActive="router-link-active"
+                class="hvr-sweep-to-black"
+                >Enquire To Buy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-12 text-right">
+          <pagination-controls
+            *ngIf="collectionSize != 0"
+            (pageChange)="loadPage($event)"
+            previousLabel="Prev"
+            nextLabel="| Next"
+          >
+          </pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

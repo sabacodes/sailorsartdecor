@@ -1,0 +1,45 @@
+@import "../../../../styles.scss";
+.gallery-details {
+  padding: 30px 0 50px;
+  .img {
+    height: 500px;
+    img {
+      height: auto;
+    }
+  }
+  .navigation {
+    background-color: $theme-blue;
+    width: 100%;
+    padding: 30px 0;
+    margin-bottom: 50px;
+    h2 {
+      color: $theme-white;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 0;
+      font-family: benton-sans, sans-serif;
+    }
+  }
+  .desc {
+    padding: 15px 0 50px;
+
+    h1 {
+      color: $theme-blue;
+      font-family: "Playfair Display";
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 0.44px;
+      margin-bottom: 25px;
+      line-height: 1;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      font-family: benton-sans, sans-serif;
+      padding-right: 20px;
+      color: #333333;
+    }
+  }
+}
+

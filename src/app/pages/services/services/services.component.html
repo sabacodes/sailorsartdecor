@@ -1,0 +1,106 @@
+<section class="service-page" *ngIf="services.length > 0">
+  <div class="navigation">
+    <div class="container-outer">
+      <div class="container-inner">
+        <div class="row no-gutters">
+          <!-- <img src="../../../../assets/images/svg/quote.svg" /> -->
+          <h2>
+            Teesta Bhandare Art Advisory is a unique advisory set up to enable
+            collectors and artists to acquire and sell a range of art from
+            across the globe. It is one of the only art advisories in the world
+            to provide an art law practice and an acquisition and sales
+            consultancy.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-outer">
+    <div class="container-inner details">
+      <div class="row acqui align-items-center">
+        <div class="col-md-3">
+          <div>
+            <img [src]="acqImage" class="img-fluid h-100 w-100" />
+          </div>
+        </div>
+        <div class="col-md-8">
+          <h1>Acquisition and Collection Management</h1>
+          <p *ngFor="let item of acquisitions">{{ item }}</p>
+        </div>
+      </div>
+      <div class="row sales align-items-center">
+        <div class="col-md-8">
+          <h1>Sales</h1>
+          <p *ngFor="let item of sales">{{ item }}</p>
+        </div>
+        <div class="col-md-3">
+          <img [src]="salesImage" class="img-fluid h-100 w-100" />
+        </div>
+      </div>
+      <div class="row legal align-items-center">
+        <div class="col-md-3">
+          <img [src]="legalImage" class="img-fluid h-100 w-100" />
+        </div>
+        <div class="col-md-8">
+          <h1>Legal</h1>
+          <p *ngFor="let item of legals">{{ item }}</p>
+        </div>
+      </div>
+      <div class="row curation align-items-center">
+        <div class="col-md-8">
+          <h1>Curation</h1>
+          <p *ngFor="let item of curations">{{ item }}</p>
+        </div>
+        <div class="col-md-3">
+          <img [src]="curImage" class="img-fluid h-100 w-100" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container-outer">
+        <div class="container-inner">
+            <div class="row justify-content-between cards">
+                <div class="col-md-6 mb-3">
+                    <div class="extra-card pointer">
+                        <div class="row align-items-start">
+                            <div class="col-3">
+                                <img src="assets/images/svg/mail.svg" class="img-fluid mt-1" />
+                            </div>
+                            <div class="col-9 pl-3">
+                                <h4 class="">Contact to enquire</h4>
+                                <p>It is a long established fact that a reader will be distracted by the
+                                    readable
+                                    content of
+                                    long established fact that a reader will be distracted by the
+                                    readable
+                                </p>
+                                <a href="javascript:void(0)" [routerLink]="['/contact']"
+                                    routerLinkActive="router-link-active">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="extra-card pointer">
+                        <div class="row align-items-start">
+                            <div class="col-3">
+                                <img src="assets/images/svg/chat.svg" class="img-fluid mt-1" />
+                            </div>
+                            <div class="col-9 pl-3">
+                                <h4 class="">Visit blog</h4>
+                                <p>It is a long established fact that a reader will be distracted by the
+                                    readable
+                                    content of
+                                    long established fact that a reader will be distracted by the
+                                    readable
+                                </p>
+                                <a href="javascript:void(0)" [routerLink]="['/blog']"
+                                    routerLinkActive="router-link-active">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</section>

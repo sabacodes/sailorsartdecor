@@ -1,0 +1,211 @@
+<header>
+  <div class="container-outer">
+    <div class="container-inner">
+      <div class="row align-items-center justify-content-center no-gutters">
+        <div class="col-2 sidebutton">
+          <button (click)="visibleSidebar1 = true" class="navigation">
+            <img
+              src="assets/images/svg/menu-of-three-lines.svg"
+              class="img-fluid"
+            />
+          </button>
+        </div>
+        <!-- sailor's -->
+        <div class="col-md-5 navbar text-left">
+          <div class="nav d-flex align-items-center justify-content-start">
+            <div class="nav-item">
+              <a
+                [routerLink]="['/services']"
+                routerLinkActive="active"
+                class="nav-link"
+                >Home</a
+              >
+            </div>
+            <div class="nav-item">
+              <a
+                [routerLink]="['/services']"
+                routerLinkActive="active"
+                class="nav-link"
+                >About</a
+              >
+            </div>
+            <div class="nav-item">
+              <a
+                [routerLink]="['/artworks']"
+                routerLinkActive="active"
+                class="nav-link"
+                >Customise</a
+              >
+            </div>
+            <!-- <div class="nav-item">
+              <a
+                [routerLink]="['/blog']"
+                routerLinkActive="active"
+                class="nav-link blog"
+                >Customise</a
+              >
+            </div> -->
+            <div class="nav-item">
+              <a
+                [routerLink]="['/blog']"
+                routerLinkActive="active"
+                class="nav-link blog"
+                >Contact</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Logo -->
+        <div
+          class="col-lg-2 col-8 col-sm-8 logo pointer"
+          [routerLink]="['/']"
+          routerLinkActive="router-link-active"
+        >
+          <img
+            src="assets/images/png/sailors-transparent.png"
+            class="img-fluid"
+            width="200"
+          />
+        </div>
+        <div class="col-md-5 navbar text-center">
+          <div class="nav d-flex align-items-center justify-content-end">
+            <div class="nav-item">
+              <a
+                [routerLink]="['/artworks']"
+                routerLinkActive="active"
+                class="nav-link"
+                >Sign Up</a
+              >
+            </div>
+            <div class="nav-item">
+              <a
+                [routerLink]="['/artworks']"
+                routerLinkActive="active"
+                class="nav-link"
+                >Login</a
+              >
+            </div>
+            <div class="nav-item">
+              <a
+                [routerLink]="['/services']"
+                routerLinkActive="active"
+                class="nav-link"
+                >Shop</a
+              >
+            </div>
+            <div class="nav-item">
+              <a
+                [routerLink]="['/blog']"
+                routerLinkActive="active"
+                class="nav-link blog"
+                >Cart(0)</a
+              >
+            </div>
+            <!-- <div class="nav-item">
+              <a
+                [routerLink]="['/about']"
+                routerLinkActive="active"
+                class="nav-link about"
+                >About</a
+              >
+            </div>
+            <div class="nav-item">
+              <a
+                [routerLink]="['/contact']"
+                routerLinkActive="active"
+                class="nav-link"
+                >Contact</a
+              >
+            </div> -->
+          </div>
+        </div>
+        <!-- Instagram link -->
+        <!-- <div class="col-md-1 col-2 text-right">
+          <div class="pointer">
+            <a
+              href="https://www.instagram.com/teestabhandare/?hl=en"
+              target="_blank"
+            >
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 512 512"
+                style="enable-background: new 0 0 512 512"
+                xml:space="preserve"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
+			C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
+			h192c61.76,0,112,50.24,112,112V352z"
+                    />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <path
+                      d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
+			c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"
+                    />
+                  </g>
+                </g>
+                <g>
+                  <g>
+                    <circle cx="393.6" cy="118.4" r="17.056" />
+                  </g>
+                </g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+              </svg>
+            </a>
+          </div>
+        </div> -->
+      </div>
+      <!-- sailors mobile navigation -->
+      <!-- <p-sidebar
+        [(visible)]="visibleSidebar1"
+        [dismissible]="true"
+        [baseZIndex]="10000"
+      >
+        <ul>
+          <li (click)="navigate('/blog')">
+            <a>Login</a>
+          </li>
+          <li (click)="navigate('/artworks')">
+            <a>About</a>
+          </li>
+          <li (click)="navigate('/services')">
+            <a>Contact</a>
+          </li>
+          <li (click)="navigate('/home')">
+            <a>Shop</a>
+          </li>
+          <li (click)="navigate('/about')">
+            <a>Customise</a>
+          </li>
+          <li (click)="navigate('/contact')">
+            <a>Cart(0)</a>
+          </li>
+        </ul>
+      </p-sidebar> -->
+    </div>
+  </div>
+</header>

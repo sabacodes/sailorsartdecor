@@ -1,0 +1,199 @@
+@import "../../../../styles.scss";
+
+.home {
+  padding: 10px 0 0px;
+
+  .welcome {
+    background-color: #F9F3EF;
+    padding: 100px 0;
+    // margin: 0 0 80px;
+
+    h1 {
+      font-size: 40px;
+      font-family: "Playfair Display";
+      letter-spacing: 1px;
+      padding: 0 0 30px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 16px;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      padding: 0px 0px 30px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .why-us {
+    background-color: $theme-black;
+
+    h1 {
+      font-size: 40px;
+      font-family: "Playfair Display";
+      padding: 100px 0 30px;
+      margin: 0;
+      color: $theme-white;
+    }
+
+    p {
+      font-size: 16px;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      padding: 0px 0px 100px;
+      color: $theme-white;
+      margin: 0;
+    }
+
+    .images {
+      position: relative;
+
+      .img1 {
+        position: absolute;
+        left: -20px;
+        top: 30px;
+        width: 64%;
+        z-index: 999;
+      }
+
+      .img2 {
+        position: absolute;
+        right: -10px;
+        bottom: 30px;
+        width: 63%;
+      }
+    }
+  }
+
+  .services {
+    background-color: #F9F3EF;
+    padding: 0 0 50px;
+
+    h1 {
+      font-size: 40px;
+      font-family: "Playfair Display";
+      padding: 100px 0 30px;
+      margin: 0;
+      color: $theme-black;
+    }
+    h2 {
+      font-size: 30px;
+      font-family: "Playfair Display";
+      padding: 100px 0 30px;
+      margin: 0;
+      color: $theme-black;
+      letter-spacing: 1.5px;
+    }
+
+    p {
+      font-size: 16px;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      padding: 0px 0px 100px;
+      color: $theme-black;
+      margin: 0;
+    }
+
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px;
+    flex-wrap: wrap;
+
+    .gallery__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      img {
+        width: 100%;
+        height: inherit;
+      }
+    }
+
+    .gallery__item {
+      background-color: #6c757d;
+    }
+
+    .gallery__item--1 {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 5;
+    }
+
+    .gallery__item--2 {
+      grid-column-start: 5;
+      grid-column-end: 16;
+      grid-row-start: 1;
+      grid-row-end: 7;
+    }
+
+    .gallery__item--3 {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 5;
+      grid-row-end: 10;
+    }
+
+    .gallery__item--4 {
+      grid-column-start: 16;
+      grid-column-end: 5;
+      grid-row-start: 7;
+      grid-row-end: 12;
+    }
+
+    .gallery__item--5 {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 10;
+      grid-row-end: 12;
+    }
+
+    .gallery__item--6 {
+      grid-column-start: 1;
+      grid-column-end: 7;
+      grid-row-start: 12;
+      grid-row-end: 14;
+    }
+
+    .gallery__item--7 {
+      grid-column-start: 16;
+      grid-column-end: 7;
+      grid-row-start: 12;
+      grid-row-end: auto;
+    }
+
+    .gallery__item--8 {
+      grid-column-start: 7;
+      grid-column-end: 16;
+      grid-row-start: 13;
+      grid-row-end: 14;
+    }
+  }
+
+  .featured {
+    padding: 30px 0 50px;
+
+    h1 {
+      padding: 10px 0 0;
+      letter-spacing: 2.1px;
+      font-family: "Playfair Display";
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .col-md-3 {
+      img {
+        max-width: 95%;
+        max-height: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<section class="gallery-details">
+  <!-- <div class="navigation">
+    <div class="container-outer">
+      <div class="container-inner">
+        <div class="row no-gutters">
+          <h2>Artist's Profile</h2>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="container-outer">
+    <div class="container-inner">
+      <div class="row">
+        <div class="col-md-12">
+          <ngb-carousel pauseOnHover="true" [activeId]="activeId" class="w-100">
+            <ng-template ngbSlide *ngFor="let item of galleryData" [id]="item?.id">
+              <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5 img">
+                  <img [src]="item?.image" class="img-fluid w-100" />
+                </div>
+                <div class="col-md-5 desc">
+                  <h1>{{ item?.title }}</h1>
+                  <p>{{ item?.description }}</p>
+                </div>
+                <div class="col-md-1"></div>
+              </div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+
+      </div>
+    </div>
+  </div>  
+</section>
