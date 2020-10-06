@@ -2,7 +2,7 @@
 
 .about {
   padding: 20px 0 50px;
-  background-color: #F9F3EF;
+  // background-color: #F9F3EF;
   padding: 100px 0;
   // margin: 0 0 80px;
 
@@ -12,6 +12,7 @@
     letter-spacing: 1px;
     padding: 0 0 30px;
     margin: 0;
+    color:$theme-black;
   }
 
   p {
@@ -105,7 +106,7 @@
 
 .why-us {
   background-color: $theme-black;
-
+  padding-bottom: 50px;
   h1 {
     font-size: 40px;
     font-family: "Playfair Display";

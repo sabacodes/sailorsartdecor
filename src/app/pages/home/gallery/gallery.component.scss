@@ -4,7 +4,7 @@
   padding: 10px 0 0px;
 
   .welcome {
-    background-color: #F9F3EF;
+    // background: url("../../../../assets/images/jpeg/pink-bg.jpg");
     padding: 100px 0;
     // margin: 0 0 80px;
 
@@ -14,6 +14,7 @@
       letter-spacing: 1px;
       padding: 0 0 30px;
       margin: 0;
+      color:$theme-black;
     }
 
     p {
@@ -69,7 +70,8 @@
   }
 
   .services {
-    background-color: #F9F3EF;
+    // background-color: #F9F3EF;
+    // background-image: url("../../../../assets/images/png/pink-back.png");
     padding: 0 0 50px;
 
     h1 {

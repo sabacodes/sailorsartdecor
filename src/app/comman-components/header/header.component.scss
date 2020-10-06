@@ -3,7 +3,9 @@
 header {
   width: 100%;
   //background-color: $theme-white;
-  //z-index: 999;
+  z-index: 999;
+  // position: fixed;
+  // background-color:#FFD6D4;
   .logo {
     padding: 15px 0 0;
     text-align: center;
@@ -51,7 +53,7 @@ header {
           }
         }
         &:hover {
-          font-weight: bold;
+          font-weight: bolder;
           color: $theme-peach;
           // color: #6dd5ed;
         }

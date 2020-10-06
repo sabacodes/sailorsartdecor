@@ -130,6 +130,7 @@ input {
   ;
 }
 
+
 // .mat-input-element {
 //   color: $theme-peach !important;
 // }
@@ -168,7 +169,7 @@ input {
   left: 0;
   right: 0;
   bottom: 0;
-  background: $theme-peach;
+  background: $theme-gray;
   // border:2px solid $theme-peach;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -318,7 +319,7 @@ input {
 .ui-accordion .ui-accordion-content {
   padding: 0.571em 1em;
   border: 0px !important;
-  background-color: #ffffff;
+  background-color: transparent !important;
   color: #333333;
   padding: 10px 30px 50px !important;
   letter-spacing: 1.2px;

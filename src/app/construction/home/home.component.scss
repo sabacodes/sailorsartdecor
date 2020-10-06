@@ -18,15 +18,24 @@
         height: 100vh;
         position: relative;
 
+        img{
+            padding:60px 0 0;
+            width:40%;
+        }
+
         h1 {
             font-family: "Playfair Display";
             font-weight: bold;
             font-size: 45px;
             line-height: 1.2;
-            color: $theme-white;
-            padding: 150px 0 60px;
+            color: $theme-black;
+            padding: 0px 0 30px;
         }
-
+        p{
+            line-height: 1.2;
+            color: $theme-black;
+            padding: 0px 0 50px;
+        }
         input {
             padding: 11px 10px;
             border-radius: 5px;
@@ -42,37 +51,37 @@
                 border: 1px solid $theme-blue;
             }
         }
-
-        .send {
-            position: absolute;
-            top: 0px;
-            right: 15px;
-
-            button {
-                border: 0;
-                padding: 9.5px 14px;
-                width: 100%;
-                background: $theme-blue;
-                border-radius: 5px;
-
-                &:focus {
-                    background-color: $theme-black;
-                    outline: none;
-                }
-
-                img {
-                    width: 20px;
-                    height: 25px;
-                }
-            }
-        }
-
         .instagram {
             svg {
-                fill: $theme-white;
-                width: 30px;
+                fill: $theme-black;
+                width: 40px;
             }
         }
+        // .send {
+        //     position: absolute;
+        //     top: 0px;
+        //     right: 15px;
+
+        //     button {
+        //         border: 0;
+        //         padding: 9.5px 14px;
+        //         width: 100%;
+        //         background: $theme-blue;
+        //         border-radius: 5px;
+
+        //         &:focus {
+        //             background-color: $theme-black;
+        //             outline: none;
+        //         }
+
+        //         img {
+        //             width: 20px;
+        //             height: 25px;
+        //         }
+        //     }
+        // }
+
+       
     }
 }
 
