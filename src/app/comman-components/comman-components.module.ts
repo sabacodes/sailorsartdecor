@@ -8,13 +8,14 @@ import { MainContainerComponent } from './main-container/main-container.componen
 import { LayoutComponent } from './layout/layout.component';
 import { ExtrasComponent } from './extras/extras.component';
 import {SidebarModule} from 'primeng/sidebar';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, MainContainerComponent, LayoutComponent, ExtrasComponent],
   imports: [
     CommonModule,
-    CommanComponentsRoutingModule,SidebarModule
+    CommanComponentsRoutingModule,SidebarModule, NgbModule
   ],
   exports: [
     HeaderComponent,FooterComponent,MainContainerComponent,LayoutComponent, ExtrasComponent

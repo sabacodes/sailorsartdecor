@@ -7,10 +7,13 @@ const routes: Routes = [
     path: "",
     loadChildren: () => import('./construction/construction.module').then(m => m.ConstructionModule),
   },
+
+
   {
     path: "web",
     loadChildren: () => import('./comman-components/comman-components.module').then(m => m.CommanComponentsModule),
   },
+
 ];
 
 @NgModule({

@@ -4,38 +4,20 @@
       <div class="row align-items-center justify-content-center no-gutters">
         <div class="col-2 sidebutton">
           <button (click)="visibleSidebar1 = true" class="navigation">
-            <img
-              src="assets/images/svg/menu-of-three-lines.svg"
-              class="img-fluid"
-            />
+            <img src="assets/images/svg/menu-of-three-lines.svg" class="img-fluid" />
           </button>
         </div>
         <!-- sailor's -->
         <div class="col-md-5 navbar text-left">
           <div class="nav d-flex align-items-center justify-content-start">
             <div class="nav-item">
-              <a
-                [routerLink]="['/services']"
-                routerLinkActive="active"
-                class="nav-link"
-                >Home</a
-              >
+              <a [routerLink]="['/services']" routerLinkActive="active" class="nav-link">Home</a>
             </div>
             <div class="nav-item">
-              <a
-                [routerLink]="['/services']"
-                routerLinkActive="active"
-                class="nav-link"
-                >About</a
-              >
+              <a [routerLink]="['/services']" routerLinkActive="active" class="nav-link">About</a>
             </div>
             <div class="nav-item">
-              <a
-                [routerLink]="['/artworks']"
-                routerLinkActive="active"
-                class="nav-link"
-                >Customise</a
-              >
+              <a [routerLink]="['/artworks']" routerLinkActive="active" class="nav-link">Customise</a>
             </div>
             <!-- <div class="nav-item">
               <a
@@ -46,60 +28,28 @@
               >
             </div> -->
             <div class="nav-item">
-              <a
-                [routerLink]="['/blog']"
-                routerLinkActive="active"
-                class="nav-link blog"
-                >Contact</a
-              >
+              <a [routerLink]="['/blog']" routerLinkActive="active" class="nav-link blog">Contact</a>
             </div>
           </div>
         </div>
         <!-- Logo -->
-        <div
-          class="col-lg-2 col-8 col-sm-8 logo pointer"
-          [routerLink]="['/']"
-          routerLinkActive="router-link-active"
-        >
-          <img
-            src="assets/images/png/sailors-transparent.png"
-            class="img-fluid"
-            width="200"
-          />
+        <div class="col-lg-2 col-8 col-sm-8 logo pointer" [routerLink]="['/']" routerLinkActive="router-link-active">
+          <img src="assets/images/png/sailors-transparent.png" class="img-fluid" width="200" />
         </div>
         <div class="col-md-5 navbar text-center">
           <div class="nav d-flex align-items-center justify-content-end">
             <div class="nav-item">
-              <a
-                [routerLink]="['/artworks']"
-                routerLinkActive="active"
-                class="nav-link"
-                >Sign Up</a
-              >
+              <a [routerLink]="['/artworks']" routerLinkActive="active" class="nav-link">Sign Up</a>
             </div>
             <div class="nav-item">
-              <a
-                [routerLink]="['/artworks']"
-                routerLinkActive="active"
-                class="nav-link"
-                >Login</a
-              >
+              <a (click)="open(content)" [routerLink]="['/artworks']" routerLinkActive="active"
+                class="nav-link">Login</a>
             </div>
             <div class="nav-item">
-              <a
-                [routerLink]="['/services']"
-                routerLinkActive="active"
-                class="nav-link"
-                >Shop</a
-              >
+              <a [routerLink]="['/services']" routerLinkActive="active" class="nav-link">Shop</a>
             </div>
             <div class="nav-item">
-              <a
-                [routerLink]="['/blog']"
-                routerLinkActive="active"
-                class="nav-link blog"
-                >Cart(0)</a
-              >
+              <a [routerLink]="['/blog']" routerLinkActive="active" class="nav-link blog">Cart(0)</a>
             </div>
             <!-- <div class="nav-item">
               <a
@@ -211,3 +161,31 @@
 </header>
 
 <!-- Modal For login -->
+
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="dateOfBirth">Date of birth</label>
+        <div class="input-group">
+          <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
+            #dp="ngbDatepicker">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>

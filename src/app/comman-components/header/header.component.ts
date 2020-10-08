@@ -1,5 +1,6 @@
-import { Component, OnInit ,ViewEncapsulation} from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit {
   visibleSidebar1: boolean = false;
   // closeResult: string;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private modalService: NgbModal) { }
 
   // openVerticallyCentered(content) {
   //   this.modalService.open(content, { centered: true });
@@ -22,5 +23,9 @@ export class HeaderComponent implements OnInit {
   navigate(route) {
     this.visibleSidebar1 = false
     this.router.navigate([route])
+  }
+
+  open(content) {
+    this.modalService.open(content)
   }
 }

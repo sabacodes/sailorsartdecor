@@ -3,7 +3,6 @@ import { catchError } from 'rxjs/operators';
 import { UserService } from 'src/app/user.service';
 import { Router } from '@angular/router';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
-
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
@@ -14,6 +13,7 @@ export class GalleryComponent implements OnInit {
   //  "gallery__item gallery__item--4", "gallery__item gallery__item--5", "gallery__item gallery__item--6",
   //   "gallery__item gallery__item--7", "gallery__item gallery__item--8"]
   gallery: any[];
+  products=[{name:'tab'}, {name:'tab'}, {name:'tab'}]
   constructor(private service: UserService, private router: Router, private ngxService: NgxUiLoaderService) {
 
   }

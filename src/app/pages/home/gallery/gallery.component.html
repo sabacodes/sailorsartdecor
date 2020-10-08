@@ -1,5 +1,4 @@
-<section class="home">
-  <!-- sailors decor's home starts here -->
+<!-- <section class="home">
   <div class="row no-gutters">
     <div class="col-md-12">
       <ngb-carousel pauseOnHover="false" class="w-100">
@@ -123,16 +122,7 @@
       </div>
     </div>
   </section>
-  <!-- <section class="featured-products">
-    <div class="container-outer">
-      <div class="container-inner">
-        <div class="row">
-          <div class="col-md-12">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
+
   <section class="why-us">
     <div class="container-outer">
       <div class="container-inner">
@@ -289,6 +279,11 @@
       </div>
     </div>
   </section>
-  <!-- </div> -->
-  <!-- </div> -->
-</section>
+
+</section> -->
+
+<p-carousel [value]="products" >
+  <ng-template let-product  pTemplate="item">
+      {{product?.name}}
+  </ng-template>
+</p-carousel>
