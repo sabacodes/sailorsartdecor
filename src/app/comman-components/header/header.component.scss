@@ -10,7 +10,7 @@ header {
     padding: 15px 0 0;
     text-align: center;
     img{
-      width:100%;
+      width:75%;
     }
     &:focus {
       outline: none;
@@ -36,6 +36,7 @@ header {
         font-weight: bold;
         position: relative;
         letter-spacing: 2.1px;
+        cursor: pointer;
         //font-family: "Playfair Display";
         &.active {
           color: $theme-peach;

@@ -1,75 +1,105 @@
 <header>
   <div class="container-outer">
     <div class="container-inner">
-      <div class="row align-items-center justify-content-center no-gutters">
+      <!-- First Part of the header -->
+      <div class="row justify-content-center align-items-center">
+        <div
+          class="col-lg-3 col-8 col-sm-8 logo pointer"
+          [routerLink]="['/']"
+          routerLinkActive="router-link-active"
+        >
+          <img
+            src="assets/images/png/sailors-transparent.png"
+            class="img-fluid"
+            width="200"
+          />
+        </div>
+      </div>
+
+      <!-- Second Part of header -->
+      <div class="row">
+        <!-- Button for side bar on mobs -->
         <div class="col-2 sidebutton">
           <button (click)="visibleSidebar1 = true" class="navigation">
-            <img src="assets/images/svg/menu-of-three-lines.svg" class="img-fluid" />
+            <img
+              src="assets/images/svg/menu-of-three-lines.svg"
+              class="img-fluid"
+            />
           </button>
         </div>
-        <!-- sailor's -->
-        <div class="col-md-5 navbar text-left">
-          <div class="nav d-flex align-items-center justify-content-start">
+        <!-- Second navigation starts here -->
+        <div class="col-md-12 navbar">
+          <div class="nav d-flex align-items-center justify-content-around">
             <div class="nav-item">
-              <a [routerLink]="['/services']" routerLinkActive="active" class="nav-link">Home</a>
-            </div>
-            <div class="nav-item">
-              <a [routerLink]="['/services']" routerLinkActive="active" class="nav-link">About</a>
-            </div>
-            <div class="nav-item">
-              <a [routerLink]="['/artworks']" routerLinkActive="active" class="nav-link">Customise</a>
-            </div>
-            <!-- <div class="nav-item">
               <a
-                [routerLink]="['/blog']"
+                [routerLink]="['/web/home']"
                 routerLinkActive="active"
-                class="nav-link blog"
-                >Customise</a
+                class="nav-link hvr-underline-from-center"
+                >Home</a
               >
-            </div> -->
-            <div class="nav-item">
-              <a [routerLink]="['/blog']" routerLinkActive="active" class="nav-link blog">Contact</a>
-            </div>
-          </div>
-        </div>
-        <!-- Logo -->
-        <div class="col-lg-2 col-8 col-sm-8 logo pointer" [routerLink]="['/']" routerLinkActive="router-link-active">
-          <img src="assets/images/png/sailors-transparent.png" class="img-fluid" width="200" />
-        </div>
-        <div class="col-md-5 navbar text-center">
-          <div class="nav d-flex align-items-center justify-content-end">
-            <div class="nav-item">
-              <a [routerLink]="['/artworks']" routerLinkActive="active" class="nav-link">Sign Up</a>
             </div>
             <div class="nav-item">
-              <a (click)="open(content)" [routerLink]="['/artworks']" routerLinkActive="active"
-                class="nav-link">Login</a>
-            </div>
-            <div class="nav-item">
-              <a [routerLink]="['/services']" routerLinkActive="active" class="nav-link">Shop</a>
-            </div>
-            <div class="nav-item">
-              <a [routerLink]="['/blog']" routerLinkActive="active" class="nav-link blog">Cart(0)</a>
-            </div>
-            <!-- <div class="nav-item">
               <a
-                [routerLink]="['/about']"
+                [routerLink]="['/web/about']"
                 routerLinkActive="active"
-                class="nav-link about"
+                class="nav-link hvr-underline-from-center"
                 >About</a
               >
             </div>
             <div class="nav-item">
               <a
-                [routerLink]="['/contact']"
                 routerLinkActive="active"
-                class="nav-link"
-                >Contact</a
+                class="nav-link hvr-underline-from-center"
+                >Customise</a
+              >
+            </div>
+            <!-- <div class="nav-item">
+              <a
+                routerLinkActive="active"
+                class="nav-link hvr-underline-from-center"
+                >Packaging</a
               >
             </div> -->
+            <div class="nav-item">
+              <a
+                (click)="open(content)"
+                class="nav-link hvr-underline-from-center"
+                >Sign Up</a
+              >
+            </div>
+            <div class="nav-item">
+              <a
+                (click)="openVerticallyCentered(login)"
+                class="nav-link hvr-underline-from-center"
+                >Login</a
+              >
+            </div>
+            <div class="nav-item">
+              <a
+                [routerLink]="['/web/artworks']"
+                routerLinkActive="active"
+                class="nav-link hvr-underline-from-center"
+                >Shop</a
+              >
+            </div>
+            <div class="nav-item">
+              <a
+                routerLinkActive="active"
+                class="nav-link blog hvr-underline-from-center"
+                >Cart(0)</a
+              >
+            </div>
+            <div class="nav-item">
+              <a
+                [routerLink]="['/web/contact']"
+                routerLinkActive="active"
+                class="nav-link blog hvr-underline-from-center"
+                >Contact</a
+              >
+            </div>
           </div>
         </div>
-        <!-- Instagram link -->
+        <!-- Instagram link if to be added -->
         <!-- <div class="col-md-1 col-2 text-right">
           <div class="pointer">
             <a
@@ -129,6 +159,7 @@
           </div>
         </div> -->
       </div>
+
       <!-- sailors mobile navigation -->
       <!-- <p-sidebar
         [(visible)]="visibleSidebar1"
@@ -160,32 +191,93 @@
   </div>
 </header>
 
-<!-- Modal For login -->
-
-
-
+<!-- Modal For SignUp -->
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
+    <!-- <h4 class="modal-title" id="modal-basic-title">LOGIN</h4> -->
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <!-- <span aria-hidden="true">&times;</span> -->
     </button>
   </div>
   <div class="modal-body">
     <form>
       <div class="form-group">
-        <label for="dateOfBirth">Date of birth</label>
-        <div class="input-group">
-          <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
-            #dp="ngbDatepicker">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email Address" />
+            <input type="tel" placeholder="Contact Number" />
+            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Confirm Password" />
+          </div>
+          <div class="text-center col-md-6">
+            <button
+              type="button"
+              class="btn hvr-sweep-to-right w-100"
+              (click)="modal.close('Save click')"
+            >
+              Save
+            </button>
           </div>
         </div>
       </div>
     </form>
   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  <!-- <div class="modal-footer"> -->
+
+  <!-- </div> -->
+</ng-template>
+
+<!-- Modal for Login -->
+<ng-template #login let-modal>
+  <div class="modal-header">
+    <!-- <h4 class="modal-title">Modal title</h4> -->
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <!-- <span aria-hidden="true">&times;</span> -->
+    </button>
   </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <!-- <input type="text" placeholder="Full Name" /> -->
+          <input type="email" placeholder="Email Address" />
+          <!-- <input type="tel" placeholder="Contact Number" /> -->
+          <input type="password" placeholder="Password" />
+          <!-- <input type="password" placeholder="Confirm Password" /> -->
+        </div>
+        <div class="text-center col-md-6">
+          <button
+            type="button"
+            class="btn hvr-sweep-to-right w-100"
+            (click)="modal.close('Save click')"
+          >
+            Login
+          </button>
+        </div>
+        <div class="col-md-12 text-center">
+          <h4 >New user ? <span (click)="open(content)">Register</span></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-light"
+      (click)="modal.close('Close click')"
+    >
+      Close
+    </button>
+  </div> -->
 </ng-template>

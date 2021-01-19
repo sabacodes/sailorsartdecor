@@ -12,13 +12,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { CarouselModule } from 'primeng/carousel';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {AccordionModule} from 'primeng/accordion';
+import {RatingModule} from 'primeng/rating';
 
 
 @NgModule({
   declarations: [AboutComponent, ContactComponent],
   imports: [
     CommonModule,AccordionModule,
-    PagesRoutingModule, CommanComponentsModule, MatFormFieldModule, MatInputModule, CarouselModule, ReactiveFormsModule, FormsModule
+    PagesRoutingModule, CommanComponentsModule, MatFormFieldModule, MatInputModule, 
+    CarouselModule, ReactiveFormsModule, FormsModule,RatingModule
   ]
 })
 export class PagesModule { }

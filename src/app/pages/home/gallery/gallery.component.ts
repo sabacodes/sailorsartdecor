@@ -13,7 +13,9 @@ export class GalleryComponent implements OnInit {
   //  "gallery__item gallery__item--4", "gallery__item gallery__item--5", "gallery__item gallery__item--6",
   //   "gallery__item gallery__item--7", "gallery__item gallery__item--8"]
   gallery: any[];
-  products=[{name:'tab'}, {name:'tab'}, {name:'tab'}]
+
+  products=[{image:"assets/images/png/1.png"}, {name:'tab'}, {name:'tab'}]
+  
   constructor(private service: UserService, private router: Router, private ngxService: NgxUiLoaderService) {
 
   }

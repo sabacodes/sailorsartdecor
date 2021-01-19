@@ -26,6 +26,18 @@ export class HeaderComponent implements OnInit {
   }
 
   open(content) {
-    this.modalService.open(content)
+    this.modalService.open(content,
+      {
+        windowClass: 'signup-modal',
+        centered: true 
+      })
   }
+  openVerticallyCentered(login) {
+    this.modalService.open(login, 
+      { 
+        windowClass: 'login-modal',
+        centered: true 
+      });
+  }
+
 }

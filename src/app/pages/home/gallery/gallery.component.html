@@ -1,5 +1,5 @@
-<!-- <section class="home">
-  <div class="row no-gutters">
+<section class="home">
+  <!-- <div class="row no-gutters">
     <div class="col-md-12">
       <ngb-carousel pauseOnHover="false" class="w-100">
         <ng-template ngbSlide>
@@ -84,7 +84,8 @@
         </ng-template>
       </ngb-carousel>
     </div>
-  </div>
+  </div> -->
+
   <section class="welcome">
     <div class="container-outer">
       <div class="container-inner">
@@ -117,6 +118,13 @@
                 </button>
               </div>
             </div>
+            <!-- <div class="row justify-content-center"> -->
+              <!-- <p-carousel [value]="products">
+                <ng-template let-product pTemplate="item">
+                  {{ product?.image }}
+                </ng-template>
+              </p-carousel> -->
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -156,6 +164,7 @@
       </div>
     </div>
   </section>
+
   <section class="why-us">
     <div class="container-outer">
       <div class="container-inner">
@@ -189,6 +198,7 @@
       </div>
     </div>
   </section>
+
   <section class="why-us">
     <div class="container-outer">
       <div class="container-inner">
@@ -222,6 +232,7 @@
       </div>
     </div>
   </section>
+
   <section class="services">
     <div class="container-outer">
       <div class="container-inner">
@@ -230,7 +241,7 @@
           <div class="col-md-12">
             <div class="row align-items-center">
               <div class="col-md-6">
-                <img src="assets/images/jpeg/finishing.jpg" class="w-100" />
+                <img src="assets/images/png/certi.png" class="w-100" />
               </div>
               <div class="col-md-6">
                 <h2>FINE FINISHING</h2>
@@ -279,11 +290,4 @@
       </div>
     </div>
   </section>
-
-</section> -->
-
-<p-carousel [value]="products" >
-  <ng-template let-product  pTemplate="item">
-      {{product?.name}}
-  </ng-template>
-</p-carousel>
+</section>

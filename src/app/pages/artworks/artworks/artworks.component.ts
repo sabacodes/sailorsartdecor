@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./artworks.component.scss']
 })
 export class ArtworksComponent implements OnInit {
+  val3: number = 5;
 
   artworks = [
     {
@@ -31,6 +32,18 @@ export class ArtworksComponent implements OnInit {
   limit = 12;
   page = 1
   collectionSize: any;
+
+  products = [
+    {
+      "title": `Ancient Compass`, "price": `Rs. 250`
+    },
+    {
+      "title": `Wall Clock`, "price": `Rs. 330`
+    },
+    {
+      "title": `Pocket Watch`, "price":`Rs. 100`
+    }
+  ]
   constructor(private service: UserService, private ngxService: NgxUiLoaderService, private router: Router) { }
 
   ngOnInit(): void {

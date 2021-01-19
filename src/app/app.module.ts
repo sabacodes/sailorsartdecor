@@ -10,6 +10,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
   ],
   imports: [
     BrowserModule,HttpClientModule,NgxPaginationModule,
-    AppRoutingModule, NgbModule, BrowserAnimationsModule, MatSliderModule, MatInputModule, MatFormFieldModule,NgxUiLoaderModule
+    AppRoutingModule, NgbModule, BrowserAnimationsModule, MatSliderModule, 
+    MatInputModule, MatFormFieldModule,NgxUiLoaderModule,
+    FormsModule
 
   ],
   providers: [],
