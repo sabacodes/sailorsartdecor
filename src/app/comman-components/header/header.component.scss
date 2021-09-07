@@ -124,6 +124,27 @@ h1 {
   color: $theme-blue;
 }
 
+
+@media(max-width:991px){
+  header{
+    .logo{
+      img{
+        width:45%;
+      }
+    }
+  }
+}
+
+@media(max-width:670px){
+  header{
+    .logo{
+      img{
+        width:50%;
+      }
+    }
+  }
+}
+
 @media (max-width: 991px) {
   header {
     .navbar{

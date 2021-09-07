@@ -5,12 +5,14 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { HomeModule } from './home/home.module';
 import { ServicesComponent } from './services/services/services.component';
+import { homedir } from 'os';
 
 
 const routes: Routes = [
   {
     path: "",
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    // loadChildren:() => import('./home/home.module').then(m =>m.HomeModule)
   },
   {
     path: "home",
